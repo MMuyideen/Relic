@@ -114,7 +114,7 @@ resource "azurerm_windows_function_app" "example" {
     "EVENTHUB_NAME"                = azurerm_eventhub.ev.name
     "EVENTHUB_CONSUMER_CONNECTION" = azurerm_eventhub_namespace_authorization_rule.cons.primary_connection_string
     "EVENTHUB_CONSUMER_GROUP"      = azurerm_eventhub_consumer_group.consumer.name
-    "NR_LICENSE_KEY"               = "eu01xx587b8937a5762a6e10f66647b6FFFFNRAL"
+    "NR_LICENSE_KEY"               = "var.relic_secret_key"
     "NR_ENDPOINT"                  = "https://log-api.newrelic.com/log/v1"
     "NR_TAGS"                      = ""
     "NR_MAX_RETRIES"               = 3
